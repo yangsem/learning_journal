@@ -148,3 +148,14 @@ $ git stash drop stash@{<stash-id>} #删除指定的临时修改
 $ git stash drop #删除最新的 stash
 ```
 
+## Git rebase 调整提交记录
+
+```
+$ git checkout master
+$ git pull
+$ git checkout dev
+$ git rebase master
+$ # 解决冲突
+$ git push --force-with-lease #远程分支没有新的提交时才会强制推送
+```
+
